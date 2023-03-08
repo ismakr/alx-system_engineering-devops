@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -ltran . ../ /boot
+ls -lans . ../ /boot
