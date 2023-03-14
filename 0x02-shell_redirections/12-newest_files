@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -printf "%t - %p\n" | sort -nk4 | cut -d " " -f 7 | cut -c 3-
+ls -lr | cut -d " " -f 9
