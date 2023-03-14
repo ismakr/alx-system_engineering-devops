@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -lr | cut -d " " -f 9
+ls -lr | cut -d " " -f 9 | head -n 12
