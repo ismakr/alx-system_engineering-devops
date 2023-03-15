@@ -1,0 +1,2 @@
+#!/bin/bash
+tr "[a-m -o n-z]" "[n-z -o a-m]"
