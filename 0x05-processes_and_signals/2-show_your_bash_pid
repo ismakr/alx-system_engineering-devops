@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
+# displays lines containing the bash
 ps -faxu | grep "[b]ash"
 # shellcheck disable=SC2009
