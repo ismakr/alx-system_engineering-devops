@@ -4,7 +4,5 @@
 # facebook.com resolves to 8.8.8.8
 cp /etc/hosts ~/hosts.new
 sed -i 's/127.0.0.1/127.0.0.2/' ~/hosts.new
-IP=8.8.8.8
-HOST="facebook.com"
-sed -i "/$HOST/ s/.*/$IP\t$HOST/g" ~/hosts.new
+echo "facebook.com\t8.8.8.8" >> ~/hosts.new
 cp -f ~/hosts.new /etc/hosts
