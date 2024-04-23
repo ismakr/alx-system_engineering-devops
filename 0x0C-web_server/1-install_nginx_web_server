@@ -2,5 +2,6 @@
 #install and config nginx
 apt-get update
 apt-get -y install nginx
+sudo chown -R ubuntu /var/www
 echo "Hello World!" > /var/www/example.com/index.html
-nginx -s reload
+service nginx restart
