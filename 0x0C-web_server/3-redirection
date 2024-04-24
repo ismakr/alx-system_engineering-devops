@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#Configure Nginx server so that /redirect_me is redirecting to another page.
+apt-get update
+apt-get -y install nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html
+new_str="server_name _;\n\trewrite ^\/redirect_me https:\/\/github.com\/ismakr permanent;"
+sudo sed -i "s/server_name _;/$new_str/" /etc/nginx/sites-available/default
+sudo service nginx restart
