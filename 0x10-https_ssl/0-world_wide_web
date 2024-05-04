@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Bash script that will display information about subdomains.
 subdomaine () {
 	#take all subdomaine and store it in sub
 	if [ "$2" ]; then
