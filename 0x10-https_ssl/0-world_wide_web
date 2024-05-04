@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+subdomaine () {
+	#take all subdomaine and store it in sub
+	if [ "$2" ]; then
+		var="$2"."$1"
+		dig $var | grep -A1 ";; ANSWER SECTION:" | awk -F " " '{print "The subdomain '$2' is a "$4" record and points to "$5}' | tail -1
+	else
+		sub="www"
+		var="$sub"."$1"
+		dig $var | grep -A1 ";; ANSWER SECTION:" | awk -F " " '{print "The subdomain '$sub' is a "$4" record and points to "$5}' | tail -1
+		sub="lb-01"
+		var="$sub"."$1"
+		dig $var | grep -A1 ";; ANSWER SECTION:" | awk -F " " '{print "The subdomain '$sub' is a "$4" record and points to "$5}' | tail -1
+		sub="web-01"
+		var="$sub"."$1"
+		dig $var | grep -A1 ";; ANSWER SECTION:" | awk -F " " '{print "The subdomain '$sub' is a "$4" record and points to "$5}' | tail -1
+		sub="web-02"
+		var="$sub"."$1"
+		dig $var | grep -A1 ";; ANSWER SECTION:" | awk -F " " '{print "The subdomain '$sub' is a "$4" record and points to "$5}' | tail -1
+	fi
+}
+subdomaine "$1" "$2"
