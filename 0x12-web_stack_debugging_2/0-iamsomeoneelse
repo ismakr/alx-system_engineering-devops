@@ -2,7 +2,8 @@
 #run the whoami command under the user passed as an argument
 if [ "$1" ]
 then
-        sudo whoami
+	sudo su "$1"
+        whoami
 else
         whoami
 fi
