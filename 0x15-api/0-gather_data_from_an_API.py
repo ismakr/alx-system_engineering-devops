@@ -27,4 +27,5 @@ if __name__ == "__main__":
     print(f"Employee {name} is done with tasks({completed}/{alltask}):")
     for user in res:
         if k in user and v == user[k]:
-            print(f"\t {user['title']}")
+            if 'completed' in user and user['completed'] is True:
+                print(f"\t {user['title']}")
