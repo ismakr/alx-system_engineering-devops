@@ -24,7 +24,7 @@ if __name__ == "__main__":
     k1, v1 = 'id', int(sys.argv[1])
     for user1 in nameres:
         if k1 in user1 and v1 == user1[k1]:
-            name = user1['name']
+            name = user1['username']
     filename = f"{sys.argv[1]}.csv"
     with open(filename, 'w') as f:
         for user in res:
